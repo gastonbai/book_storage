@@ -1,6 +1,7 @@
-import 'package:book_storage/core/extensions/widget_padding_extension.dart';
+import 'package:books_storage/core/extensions/widget_padding_extension.dart';
+import 'package:books_storage/domain/models/book_info.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import '../../domain/models/book_info.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
@@ -8,38 +9,37 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  State<MyHomePage> createState() => MyHomePageState();
+  State<MyHomePage> createState() => _MyHomePageState();
 }
 
-class MyHomePageState extends State<MyHomePage>{
+class _MyHomePageState extends State<MyHomePage> {
   void onTapActiveFilledButton() {}
 
-  ///Создание тела надписей
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text(widget.title)
+        title: Text(widget.title),
       ),
       body: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (BuildContext context, int index,) {
-            return BookShortInfoWidget(
+        itemCount: 10,
+        itemBuilder: (BuildContext context, int index) {
+          return BookShortInfoWidget(
             bookInfo: BookInfo(
-              title: 'Творцы совпадений',
-              author: 'Йоав Блум',
-              year: 2018,
-              publisher: 'ACT',
-              pageCount: 480,
+              title: 'Песнь льда и пламени',
+              author: 'Джордж Мартин',
+              year: 1996,
+              publisher: 'АСТ',
+              pageCount: 650,
             ),
           );
         },
       ),
-    floatingActionButton: FloatingActionButton(
-    onPressed: () {},
-    tooltip: 'Increment',
-    child: const Icon(Icons.add),
-    ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {},
+        tooltip: 'Increment',
+        child: const Icon(Icons.add),
+      ),
     );
   }
 }
@@ -48,26 +48,25 @@ class BookShortInfoWidget extends StatelessWidget {
   final BookInfo bookInfo;
 
   const BookShortInfoWidget({
+    required this.bookInfo,
     super.key,
-    required this.bookInfo
   });
 
-  ///Создание закругленного квадратного виджета
+  @override
   Widget build(BuildContext context) {
     return Row(
       children: [
         ClipRRect(
           borderRadius: BorderRadius.circular(10),
           child: const ColoredBox(
-              color: Colors.purpleAccent,
-              child: SizedBox(
-               width: 100,
-               height: 100,
-          ),
+            color: Colors.black26,
+            child: SizedBox(
+              width: 100,
+              height: 100,
+            ),
           ),
         ),
         Column(
-          ///Создание жироного шрифта
           crossAxisAlignment: CrossAxisAlignment.start,
           mainAxisSize: MainAxisSize.min,
           children: [
@@ -79,8 +78,6 @@ class BookShortInfoWidget extends StatelessWidget {
             ),
             if (bookInfo.author.isEmpty)
               Text(bookInfo.author).paddingOnly(top: 4),
-
-            ///Создание основных надписей
             Row(
               children: [
                 Text('Год: '),
@@ -97,6 +94,6 @@ class BookShortInfoWidget extends StatelessWidget {
           ],
         ).paddingOnly(left: 10),
       ],
-    ).paddingSymmetric(vertical: 8, horisontal: 16);
+    ).paddingSymmetric(vertical: 8, horizontal: 16);
   }
 }
