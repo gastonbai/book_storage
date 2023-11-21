@@ -1,7 +1,8 @@
 import 'dart:async';
-import 'package:book_storage/data/local_data_sources/book_storage/scr/models/book_model.dart';
 import 'package:book_storage/domain/models/book_info.dart';
 import 'package:sqflite/sqflite.dart';
+import 'models/book_model.dart';
+
 
 class BooksDataSource {
   late Database database;
