@@ -1,17 +1,10 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
 
 import '../../../../../domain/models/book_info.dart';
+import '../books_storage_hash_keys.dart';
 
 part 'book_model.freezed.dart';
 part 'book_model.g.dart';
-
-const String tableUserBooks = 'user_books';
-const String columnId = 'id';
-const String columnTitle = 'title';
-const String columnPublisher = 'publisher';
-const String columnAuthor = 'author';
-const String columnYear = 'year';
-const String columnPageCount = 'pageCount';
 
 @freezed
 abstract class BookModel with _$BookModel {

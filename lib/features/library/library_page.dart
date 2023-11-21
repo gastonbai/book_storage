@@ -4,7 +4,7 @@ import '../../configuration/navigation/home_page.dart';
 import '../../domain/models/book_info.dart';
 
 class LibraryPage extends StatefulWidget {
-  const LibraryPage({super.key});
+  const LibraryPage({super.key, required String title});
 
   @override
   State<LibraryPage> createState() => _LibraryPageState();
@@ -17,7 +17,7 @@ class _LibraryPageState extends State<LibraryPage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('a'),
+        title: Text('Мои прочитанные книги'),
       ),
       body: ListView.builder(
         itemCount: 3,
@@ -36,7 +36,7 @@ class _LibraryPageState extends State<LibraryPage> {
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         tooltip: 'Increment',
-        child: const Icon(Icons.add),
+        child: const Icon(Icons.add_chart_outlined),
       ),
     );
   }

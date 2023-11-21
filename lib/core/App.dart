@@ -1,6 +1,4 @@
 import 'package:flutter/material.dart';
-
-import '../configuration/navigation/home_page.dart';
 import '../features/library/library_page.dart';
 
 class App extends StatelessWidget {
@@ -9,11 +7,14 @@ class App extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
+      title: '545',
       theme: ThemeData(
-        primarySwatch: Colors.blue,
+        primarySwatch: Colors.cyan,
+        // primaryColor: Color.fromRGBO(10, 17, 58, 1),
       ),
-      home: LibraryPage(),
+      home:const LibraryPage(
+          title: 'Мои прочитанные книги',
+      ),
     );
   }
 }

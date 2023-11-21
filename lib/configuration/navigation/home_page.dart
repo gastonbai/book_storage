@@ -1,3 +1,5 @@
+import 'dart:math';
+
 import 'package:book_storage/core/extensions/widget_padding_extension.dart';
 import 'package:flutter/material.dart';
 import '../../domain/models/book_info.dart';
@@ -19,7 +21,7 @@ class MyHomePageState extends State<MyHomePage>{
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-          title: Text(widget.title)
+          title: Text('widget.title')
       ),
       body: ListView.builder(
         itemCount: 3,
@@ -57,9 +59,9 @@ class BookShortInfoWidget extends StatelessWidget {
     return Row(
       children: [
         ClipRRect(
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(18),
           child: const ColoredBox(
-            color: Colors.purpleAccent,
+            color: Colors.blueGrey,
             child: SizedBox(
               width: 100,
               height: 100,
