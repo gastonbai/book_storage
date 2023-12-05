@@ -5,7 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77de90db-eecb-41ed-881a-81ecc0ed9347" name="Changes" comment="Привел в порядок код, поэкспериментировал с темами">
-      <change afterPath="$PROJECT_DIR$/lib/configuration/navigation/books_page.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/configuration/navigation/book_route_base.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/configuration/navigation/book_router.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/database/q.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/library/book_manager.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/features/library/widgets/book_created_widget.dart" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/pages/library_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/books_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/books_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/configuration/navigation/books_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/configuration/navigation/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/App.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/App.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/data/local_data_sources/book_storage/book_dara_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local_data_sources/book_storage/book_dara_source.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/library/library_page.dart" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +48,20 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;gastonbai&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">
+    <option name="selectedUrlAndAccountId">
+      <UrlAndAccount>
+        <option name="accountId" value="9a543a4a-2c6f-4146-a93e-89a54c7a523c" />
+        <option name="url" value="https://github.com/gastonbai/book_storage.git" />
+      </UrlAndAccount>
+    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -65,16 +93,19 @@
     &quot;flutter.preview.tool.window.visible&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;io.flutter.reload.alreadyRun&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/danil/Downloads/Telegram Desktop/book_storage&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
 }</component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\danil\dev\book_storage\lib\pages" />
       <recent name="C:\Users\danil\dev\book_storage\lib\data\local_data_sources\book_storage" />
     </key>
   </component>
@@ -99,6 +130,19 @@
       <workItem from="1700819810750" duration="3689000" />
       <workItem from="1700924451480" duration="596000" />
       <workItem from="1701084611041" duration="381000" />
+      <workItem from="1701179989472" duration="26000" />
+      <workItem from="1701193433392" duration="1329000" />
+      <workItem from="1701201785703" duration="24000" />
+      <workItem from="1701201821666" duration="7000" />
+      <workItem from="1701201842812" duration="21000" />
+      <workItem from="1701201897206" duration="196000" />
+      <workItem from="1701202112640" duration="25000" />
+      <workItem from="1701202148848" duration="2222000" />
+      <workItem from="1701263816060" duration="336000" />
+      <workItem from="1701264170037" duration="415000" />
+      <workItem from="1701264647181" duration="4000" />
+      <workItem from="1701264668405" duration="5834000" />
+      <workItem from="1701376044588" duration="2709000" />
     </task>
     <task id="LOCAL-00001" summary="Вернул потерянный код из-за того, что не комитил :(">
       <option name="closed" value="true" />
@@ -116,7 +160,15 @@
       <option name="project" value="LOCAL" />
       <updated>1700604033533</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Привел в порядок код, поэкспериментировал с темами">
+      <option name="closed" value="true" />
+      <created>1701180004222</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1701180004222</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -143,5 +195,15 @@
     <MESSAGE value="Вернул потерянный код из-за того, что не комитил :(" />
     <MESSAGE value="Привел в порядок код, поэкспериментировал с темами" />
     <option name="LAST_COMMIT_MESSAGE" value="Привел в порядок код, поэкспериментировал с темами" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="Dart">
+          <url>file://$PROJECT_DIR$/../flutter/bin/cache/dart-sdk/lib/js/js.dart</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

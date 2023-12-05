@@ -1,8 +1,6 @@
-import 'dart:math';
-
 import 'package:book_storage/core/extensions/widget_padding_extension.dart';
 import 'package:flutter/material.dart';
-import '../../domain/models/book_info.dart';
+import '../domain/models/book_info.dart';
 
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});

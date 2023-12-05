@@ -4,6 +4,7 @@ import '../../../../../domain/models/book_info.dart';
 import '../books_storage_hash_keys.dart';
 
 part 'book_model.freezed.dart';
+
 part 'book_model.g.dart';
 
 @freezed

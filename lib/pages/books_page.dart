@@ -1,7 +1,7 @@
 import 'package:book_storage/data/local_data_sources/book_storage/book_dara_source.dart';
 import 'package:flutter/material.dart';
 
-import 'domain/models/book_info.dart';
+import '../domain/models/book_info.dart';
 
 class BooksPage extends StatefulWidget {
   const BooksPage({super.key});
