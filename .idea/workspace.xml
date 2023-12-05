@@ -5,21 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="77de90db-eecb-41ed-881a-81ecc0ed9347" name="Changes" comment="Привел в порядок код, поэкспериментировал с темами">
-      <change afterPath="$PROJECT_DIR$/lib/configuration/navigation/book_route_base.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/configuration/navigation/book_router.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/database/q.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/library/book_manager.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/library/widgets/book_created_widget.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/pages/library_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/books_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/books_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/configuration/navigation/books_page.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/configuration/navigation/home_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/home_page.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/core/App.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/App.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/data/local_data_sources/book_storage/book_dara_source.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/data/local_data_sources/book_storage/book_dara_source.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/library/library_page.dart" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/features/library/book_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/library/book_manager.dart" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -143,6 +130,8 @@
       <workItem from="1701264647181" duration="4000" />
       <workItem from="1701264668405" duration="5834000" />
       <workItem from="1701376044588" duration="2709000" />
+      <workItem from="1701784839524" duration="23000" />
+      <workItem from="1701805362402" duration="652000" />
     </task>
     <task id="LOCAL-00001" summary="Вернул потерянный код из-за того, что не комитил :(">
       <option name="closed" value="true" />
@@ -168,7 +157,15 @@
       <option name="project" value="LOCAL" />
       <updated>1701180004222</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="Привел в порядок код, поэкспериментировал с темами">
+      <option name="closed" value="true" />
+      <created>1701784845087</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1701784845087</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -195,15 +192,5 @@
     <MESSAGE value="Вернул потерянный код из-за того, что не комитил :(" />
     <MESSAGE value="Привел в порядок код, поэкспериментировал с темами" />
     <option name="LAST_COMMIT_MESSAGE" value="Привел в порядок код, поэкспериментировал с темами" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="Dart">
-          <url>file://$PROJECT_DIR$/../flutter/bin/cache/dart-sdk/lib/js/js.dart</url>
-          <option name="timeStamp" value="1" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>
