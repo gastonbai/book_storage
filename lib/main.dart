@@ -1,13 +1,14 @@
-import 'dart:async';
-import 'dart:developer';
-
-import 'package:book_storage/data/local_data_sources/book_storage/book_dara_source.dart';
+import 'package:book_storage/features/library/cubit/library_cubit.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 
 import 'core/App.dart';
 
 void main() {
-  runApp(const App());
+  runApp(BlocProvider(
+    create: (context) => LibraryCubit(),
+    child: App(),
+  ));
   // runZonedGuarded(
   //   () async {
   //     WidgetsFlutterBinding.ensureInitialized();

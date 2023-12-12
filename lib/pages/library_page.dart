@@ -1,21 +1,26 @@
 import 'package:book_storage/features/library/widgets/book_created_widget.dart';
 import 'package:flutter/material.dart';
-import 'package:go_router/go_router.dart';
 import '../configuration/navigation/book_route_base.dart';
+import '../features/library/book_manager.dart';
 import 'home_page.dart';
 import '../domain/models/book_info.dart';
 
 class LibraryPage extends StatefulWidget {
-  const LibraryPage({super.key, required String title});
+  const LibraryPage({
+    super.key,
+    required String title,
+  });
 
   @override
   State<LibraryPage> createState() => _LibraryPageState();
 }
 
 class _LibraryPageState extends State<LibraryPage> {
-  get ter => null;
+  late final BookCreationCubit bookCreationCubit;
 
-  void onTapActiveFilledButton() {}
+  // void initState() {
+  //   bookCreationCubit = BookCreationCubit(context.
+  // }
 
   static const mainPaths = [
     routeBase.addBook,
@@ -55,31 +60,16 @@ class _LibraryPageState extends State<LibraryPage> {
           tooltip: 'Increment',
           child: const Icon(Icons.add_chart_outlined),
         ),
-        bottomNavigationBar: NavigationBar(
-            onDestinationSelected: (int index) {
-              setState(() {});
-            },
-            selectedIndex: currentPageIndex,
-            destinations: const <Widget>[
-              NavigationDestination(
-                icon: Icon(Icons.insert_chart_outlined_outlined),
-                label: 'Library',
-              ),
-              NavigationDestination(
-                icon: Icon(Icons.co_present),
-                label: 'People',
-              ),
-              NavigationDestination(
-                icon: Icon(Icons.imagesearch_roller_sharp),
-                label: 'Add book',
-              ),
-            ]));
+    );
   }
 
   Future<void> createBook() async {
     final book = await showDialog<BookInfo?>(
       context: context,
-      builder: (context) => BookCreatedWidget(),
+      builder: (context) => BookCreatedWidget(
+        navigator: Navigator.of(context),
+      ),
     );
+    if (book != null) {}
   }
 }

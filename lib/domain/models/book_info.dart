@@ -10,7 +10,7 @@ class BookInfo {
   final int pageCount;
 
   ///Содержание в строке
-  BookInfo({
+  BookInfo( {
     this.title = '',
     this.publisher = '',
     this.author = '',

@@ -3,8 +3,13 @@ import 'package:book_storage/features/library/book_manager.dart';
 import 'package:flutter/material.dart';
 
 class BookCreatedWidget extends StatelessWidget{
+  final NavigatorState navigator;
+  final BookCreationCubit bookCreationCubit = BookCreationCubit();
 
-  get navigator => null;
+  BookCreatedWidget({
+    required this.navigator,
+    super.key,
+});
 
   @override
   Widget build(BuildContext context) {
@@ -17,13 +22,18 @@ class BookCreatedWidget extends StatelessWidget{
          mainAxisSize: MainAxisSize.min,
         children: [
           const Text('Название'),
+          TextField(onChanged: bookCreationCubit.setTitle),
           const Text('Автор'),
+          TextField(onChanged: bookCreationCubit.setAuthor),
           const Text('Год'),
+          TextField(onChanged: bookCreationCubit.setYear),
           const Text('Издательство'),
+          TextField(onChanged: bookCreationCubit.setPublisher),
           const Text('Страниц'),
+          TextField(onChanged: bookCreationCubit.setPageCount),
           Center(
             child: FilledButton(
-                onPressed: () {BookCreatedWidget().toStringDeep();},
+                onPressed: cancel,
                 child: const Text('Сохранить'),
             ),
           )
@@ -31,6 +41,11 @@ class BookCreatedWidget extends StatelessWidget{
       ),
     ),
   );
+  }
+
+  Future<void> cancel() async{
+    final book = BookInfo();
+    navigator.pop(await book);
   }
 
 }
