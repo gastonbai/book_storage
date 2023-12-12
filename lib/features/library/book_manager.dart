@@ -21,5 +21,3 @@ class BookCreationCubit extends Cubit<BookInfo> {
 
   void setAuthor(String value) => emit(state.copyWith(title: value));
 }
-
-

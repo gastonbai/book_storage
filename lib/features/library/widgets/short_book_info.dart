@@ -39,6 +39,18 @@ class BookShortInfoWidget extends StatelessWidget {
               Text(bookInfo.author).paddingOnly(top: 5),
             Row(
               children: [
+                Text('Название: '),
+                Text(bookInfo.title.toString()),
+              ],
+            ).paddingOnly(top: 4),
+            Row(
+              children: [
+                Text('Автор: '),
+                Text(bookInfo.author),
+              ],
+            ).paddingOnly(top: 4),
+            Row(
+              children: [
                 Text('Год: '),
                 Text(bookInfo.year.toString()),
               ],
@@ -49,11 +61,16 @@ class BookShortInfoWidget extends StatelessWidget {
                 Text(bookInfo.publisher),
               ],
             ).paddingOnly(top: 4),
-            Text('${bookInfo.pageCount} стр.').paddingOnly(top: 4),
+            Row(
+              children: [
+                Text('Кол-во страниц: '),
+                Text(bookInfo.pageCount.toString()),
+              ],
+            ).paddingOnly(top: 4),
           ],
         ).paddingOnly(left: 10),
       ],
-    ).paddingSymmetric(vertical: 8,horisontal: 16);
-    throw UnimplementedError();
+    ).paddingSymmetric(vertical: 8, horisontal: 16);
   }
+
 }

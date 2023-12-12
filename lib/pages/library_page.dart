@@ -1,8 +1,10 @@
+import 'package:book_storage/features/library/cubit/library_cubit.dart';
+import 'package:book_storage/features/library/views/library_error_view.dart';
+import 'package:book_storage/features/library/views/library_loaded_view.dart';
+import 'package:book_storage/features/library/views/library_loading_view.dart';
 import 'package:book_storage/features/library/widgets/book_created_widget.dart';
 import 'package:flutter/material.dart';
-import '../configuration/navigation/book_route_base.dart';
-import '../features/library/book_manager.dart';
-import 'home_page.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
 import '../domain/models/book_info.dart';
 
 class LibraryPage extends StatefulWidget {
@@ -16,60 +18,48 @@ class LibraryPage extends StatefulWidget {
 }
 
 class _LibraryPageState extends State<LibraryPage> {
-  late final BookCreationCubit bookCreationCubit;
+  late final LibraryCubit libraryCubit;
 
-  // void initState() {
-  //   bookCreationCubit = BookCreationCubit(context.
-  // }
-
-  static const mainPaths = [
-    routeBase.addBook,
-    routeBase.library,
-    routeBase.people,
-  ];
-  int currentPageIndex = 1;
-
-  // (BuildContext context) {
-  //   final path = GoRouterState.of(context).uri.toString();
-  //
-  //   return mainPaths.indexWhere((element) => path.startsWith(element.path));
-  // }
+  @override
+  void initState() {
+    libraryCubit = context.read<LibraryCubit>()..init();
+    super.initState();
+  }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: AppBar(
-          title: Text('Мои прочитанные книги'),
-        ),
-        body: ListView.builder(
-          itemCount: 3,
-          itemBuilder: (BuildContext context, int index) {
-            return BookShortInfoWidget(
-              bookInfo: BookInfo(
-                title: 'Творцы совпадений',
-                author: 'Йоав Блум',
-                year: 2018,
-                publisher: 'АСТ',
-                pageCount: 480,
-              ),
-            );
+      appBar: AppBar(
+        title: const Text('Мои прочитанные книги'),
+      ),
+      body: RefreshIndicator(
+        onRefresh: () => libraryCubit.init(),
+        child: BlocBuilder<LibraryCubit, LibraryState>(
+          builder: (context, state) {
+            return switch (state) {
+              LibraryLoadingState() => const LibraryLoadingView(),
+              LibraryFailedState() => LibraryErrorView(state: state),
+              LibraryLoadedState() => LibraryLoadedView(state: state),
+            };
           },
         ),
-        floatingActionButton: FloatingActionButton(
-          onPressed: createBook,
-          tooltip: 'Increment',
-          child: const Icon(Icons.add_chart_outlined),
-        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: createBook,
+        tooltip: 'Increment',
+        child: const Icon(Icons.add_chart_outlined),
+      ),
     );
   }
 
   Future<void> createBook() async {
     final book = await showDialog<BookInfo?>(
       context: context,
-      builder: (context) => BookCreatedWidget(
-        navigator: Navigator.of(context),
-      ),
+      builder: (context) => BookCreatedWidget(navigator: Navigator.of(context)),
     );
-    if (book != null) {}
+
+    if (book != null) {
+      libraryCubit.addBook(book);
+    }
   }
 }

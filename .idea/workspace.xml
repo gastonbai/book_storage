@@ -1,22 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AutoImportSettings">
-    <option name="autoReloadType" value="SELECTIVE" />
-  </component>
   <component name="ChangeListManager">
-    <list default="true" id="77de90db-eecb-41ed-881a-81ecc0ed9347" name="Changes" comment="Привел в порядок код, поэкспериментировал с темами">
-      <change afterPath="$PROJECT_DIR$/lib/features/library/cubit/library_cubit.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/library/cubit/library_state.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/library/views/library_error_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/library/views/library_loaded_view.dart" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/features/library/views/library_loading_view.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" afterDir="false" />
+    <list default="true" id="d1c48fb7-4719-477c-9a0c-e47b3a6aa6d9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.metadata" beforeDir="false" afterPath="$PROJECT_DIR$/.metadata" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/android/book_storage_android.iml" beforeDir="false" afterPath="$PROJECT_DIR$/android/book_storage_android.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/book_storage.iml" beforeDir="false" afterPath="$PROJECT_DIR$/book_storage.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/configuration/navigation/book_router.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/configuration/navigation/book_router.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/App.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/App.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/core/extensions/widget_padding_extension.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/core/extensions/widget_padding_extension.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/domain/models/book_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/domain/models/book_info.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/library/book_manager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/library/book_manager.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/features/library/widgets/book_created_widget.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/features/library/widgets/book_created_widget.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/main.dart" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/lib/pages/books_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/books_page.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/pages/books_page.dart" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/lib/pages/library_page.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/pages/library_page.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
@@ -25,90 +24,35 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileEditorManager">
-    <leaf>
-      <file leaf-file-name="main.dart" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/lib/main.dart">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="0">
-              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-    </leaf>
-  </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Dart File" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-  </component>
-  <component name="GitHubPullRequestSearchHistory">{
-  &quot;lastFilter&quot;: {
-    &quot;state&quot;: &quot;OPEN&quot;,
-    &quot;assignee&quot;: &quot;gastonbai&quot;
-  }
-}</component>
-  <component name="GithubPullRequestsUISettings">
-    <option name="selectedUrlAndAccountId">
-      <UrlAndAccount>
-        <option name="accountId" value="9a543a4a-2c6f-4146-a93e-89a54c7a523c" />
-        <option name="url" value="https://github.com/gastonbai/book_storage.git" />
-      </UrlAndAccount>
-    </option>
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
   <component name="ProjectColorInfo">{
-  &quot;customColor&quot;: &quot;&quot;,
-  &quot;associatedIndex&quot;: 0
+  &quot;associatedIndex&quot;: 1
 }</component>
-  <component name="ProjectId" id="2YVDmHj8FEFVV4tLAWpsz3k3Je2" />
-  <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1" />
-    <panes>
-      <pane id="ProjectPane">
-        <option name="show-excluded-files" value="false" />
-      </pane>
-    </panes>
+  <component name="ProjectId" id="2YopQIxIQ2oHvIEwuteNzByUKhM" />
+  <component name="ProjectReloadState">
+    <option name="STATE" value="1" />
   </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "dart.analysis.tool.window.visible": "false",
-    "git-widget-placeholder": "main",
-    "io.flutter.reload.alreadyRun": "true",
-    "last_opened_file_path": "C:/Users/danil/Downloads/Telegram Desktop/book_storage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "show.migrate.to.gradle.popup": "false",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;dart.analysis.tool.window.visible&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/danil/Downloads/Telegram Desktop/book_storage&quot;,
+    &quot;show.migrate.to.gradle.popup&quot;: &quot;false&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
-  <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\danil\dev\book_storage\lib\features\library\cubit" />
-      <recent name="C:\Users\danil\dev\book_storage\lib\pages" />
-      <recent name="C:\Users\danil\dev\book_storage\lib\data\local_data_sources\book_storage" />
-    </key>
-  </component>
+}</component>
   <component name="RunManager">
     <configuration name="main.dart" type="FlutterRunConfigurationType" factoryName="Flutter">
       <option name="filePath" value="$PROJECT_DIR$/lib/main.dart" />
@@ -118,107 +62,22 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="77de90db-eecb-41ed-881a-81ecc0ed9347" name="Changes" comment="" />
-      <created>1700593549100</created>
+      <changelist id="d1c48fb7-4719-477c-9a0c-e47b3a6aa6d9" name="Changes" comment="" />
+      <created>1701201769180</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1700593549100</updated>
-      <workItem from="1700593550368" duration="3854000" />
-      <workItem from="1700602022128" duration="1363000" />
-      <workItem from="1700603477198" duration="570000" />
-      <workItem from="1700691284721" duration="594000" />
-      <workItem from="1700819810750" duration="3689000" />
-      <workItem from="1700924451480" duration="596000" />
-      <workItem from="1701084611041" duration="381000" />
-      <workItem from="1701179989472" duration="26000" />
-      <workItem from="1701193433392" duration="1329000" />
-      <workItem from="1701201785703" duration="24000" />
-      <workItem from="1701201821666" duration="7000" />
-      <workItem from="1701201842812" duration="21000" />
-      <workItem from="1701201897206" duration="196000" />
-      <workItem from="1701202112640" duration="25000" />
-      <workItem from="1701202148848" duration="2222000" />
-      <workItem from="1701263816060" duration="336000" />
-      <workItem from="1701264170037" duration="415000" />
-      <workItem from="1701264647181" duration="4000" />
-      <workItem from="1701264668405" duration="5834000" />
-      <workItem from="1701376044588" duration="2709000" />
-      <workItem from="1701784839524" duration="23000" />
-      <workItem from="1701805362402" duration="785000" />
-      <workItem from="1701808522541" duration="2134000" />
-      <workItem from="1701897106539" duration="712000" />
-      <workItem from="1702113173229" duration="3966000" />
-      <workItem from="1702127204487" duration="1465000" />
-      <workItem from="1702134293586" duration="891000" />
-      <workItem from="1702361418918" duration="2867000" />
-      <workItem from="1702374373905" duration="2682000" />
+      <updated>1701201769180</updated>
+      <workItem from="1701201771943" duration="12000" />
+      <workItem from="1701201812073" duration="8000" />
+      <workItem from="1701201830511" duration="10000" />
+      <workItem from="1701201866351" duration="29000" />
+      <workItem from="1701202097439" duration="14000" />
+      <workItem from="1701202140269" duration="7000" />
+      <workItem from="1702410124396" duration="269000" />
     </task>
-    <task id="LOCAL-00001" summary="Вернул потерянный код из-за того, что не комитил :(">
-      <option name="closed" value="true" />
-      <created>1700598448397</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1700598448397</updated>
-    </task>
-    <task id="LOCAL-00002" summary="Привел в порядок код, поэкспериментировал с темами">
-      <option name="closed" value="true" />
-      <created>1700604033533</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1700604033533</updated>
-    </task>
-    <task id="LOCAL-00003" summary="Привел в порядок код, поэкспериментировал с темами">
-      <option name="closed" value="true" />
-      <created>1701180004222</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1701180004222</updated>
-    </task>
-    <task id="LOCAL-00004" summary="Привел в порядок код, поэкспериментировал с темами">
-      <option name="closed" value="true" />
-      <created>1701784845087</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1701784845087</updated>
-    </task>
-    <task id="LOCAL-00005" summary="Привел в порядок код, поэкспериментировал с темами">
-      <option name="closed" value="true" />
-      <created>1701808375935</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1701808375935</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
     <servers />
-  </component>
-  <component name="ToolWindowManager">
-    <editor active="true" />
-    <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
-    </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
-  </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State />
-          </value>
-        </entry>
-      </map>
-    </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="Вернул потерянный код из-за того, что не комитил :(" />
-    <MESSAGE value="Привел в порядок код, поэкспериментировал с темами" />
-    <option name="LAST_COMMIT_MESSAGE" value="Привел в порядок код, поэкспериментировал с темами" />
   </component>
 </project>

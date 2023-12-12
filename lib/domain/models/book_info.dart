@@ -10,13 +10,13 @@ class BookInfo {
   final int pageCount;
 
   ///Содержание в строке
-  BookInfo( {
+  BookInfo({
     this.title = '',
     this.publisher = '',
     this.author = '',
     this.year = -1,
     this.pageCount = 0,
-    this.id = 1,
+    this.id,
   });
 
   BookInfo copyWith({

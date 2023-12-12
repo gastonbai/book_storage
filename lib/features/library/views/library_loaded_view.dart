@@ -1,9 +1,8 @@
+import 'package:book_storage/features/library/cubit/library_cubit.dart';
 import 'package:book_storage/features/library/widgets/short_book_info.dart';
 import 'package:flutter/cupertino.dart';
 
-import '../cubit/library_state.dart';
-
-class LibraryLoadedView extends StatefulWidget {
+class LibraryLoadedView extends StatelessWidget {
   final LibraryLoadedState state;
 
   const LibraryLoadedView({
@@ -12,17 +11,14 @@ class LibraryLoadedView extends StatefulWidget {
   });
 
   @override
-  State<LibraryLoadedView> createState() => _LibraryLoadedViewState();
-}
-
-class _LibraryLoadedViewState extends State<LibraryLoadedView> {
-  @override
   Widget build(BuildContext context) {
+    if (state.books.isEmpty) {}
+
     return ListView.builder(
-      itemCount: widget.state.books.length,
+      itemCount: state.books.length,
       itemBuilder: (context, index) {
         return BookShortInfoWidget(
-          bookInfo: widget.state.books[index],
+          bookInfo: state.books[index],
         );
       },
     );

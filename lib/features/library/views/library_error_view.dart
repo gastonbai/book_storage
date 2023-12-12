@@ -1,10 +1,8 @@
-
+import 'package:book_storage/features/library/cubit/library_cubit.dart';
 import 'package:flutter/material.dart';
 
-import '../cubit/library_state.dart';
-
 class LibraryErrorView extends StatelessWidget {
-  final LibraryErrorState state;
+  final LibraryFailedState state;
 
   const LibraryErrorView({
     required this.state,

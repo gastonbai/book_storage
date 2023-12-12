@@ -7,4 +7,3 @@ const String columnPublisher = 'Publisher';
 const String columnAuthor = 'Author';
 const String columnYear = 'Year';
 const String columnPageCount = 'PageCount';
-

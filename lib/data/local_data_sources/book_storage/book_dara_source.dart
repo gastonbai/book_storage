@@ -4,7 +4,6 @@ import 'package:sqflite/sqflite.dart';
 import 'books_storage_hash_keys.dart';
 import 'models/book_model.dart';
 
-
 class BooksDataSource {
   late Database database;
   bool isInit = false;
@@ -43,7 +42,7 @@ class BooksDataSource {
     return records.map((e) => BookModel.fromJson(e).toEntity()).toList();
   }
 
-  Future<int> remove(int id) async{
+  Future<int> remove(int id) async {
     return database.delete(
       tableUserBooks,
       where: '$columnId = ?',
@@ -54,12 +53,12 @@ class BooksDataSource {
   FutureOr<void> createDatabase(Database db, int version) async {
     await db.execute(
       'CREATE TABLE $tableUserBooks ('
-      '$columnId INTEGER PRIMAL KEY,'
-      '$columnTitle TEXT,'
-      '$columnPublisher TEXT,'
-      '$columnAuthor TEXT,'
-      '$columnYear INTEGER,'
-      '$columnPageCount INTEGER,'
+      '$columnId INTEGER PRIMARY KEY, '
+      '$columnTitle TEXT, '
+      '$columnPublisher TEXT, '
+      '$columnAuthor TEXT, '
+      '$columnYear INTEGER, '
+      '$columnPageCount INTEGER'
       ')',
     );
   }
