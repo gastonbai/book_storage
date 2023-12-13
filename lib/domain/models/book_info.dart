@@ -18,7 +18,9 @@ class BookInfo {
     this.pageCount = 0,
     this.id,
   });
+}
 
+extension BookCopy on BookInfo {
   BookInfo copyWith({
     int? id,
     String? title,
@@ -37,3 +39,4 @@ class BookInfo {
     );
   }
 }
+
