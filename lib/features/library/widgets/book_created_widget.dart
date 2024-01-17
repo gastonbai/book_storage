@@ -9,6 +9,7 @@ import '../../../domain/models/book_info.dart';
 import '../book_manager.dart';
 import '../cubit/library_cubit.dart';
 
+//всплывающий виджет для добавления книги
 class BookCreatedWidget extends StatefulWidget {
   final NavigatorState navigator;
 
@@ -22,8 +23,11 @@ class BookCreatedWidget extends StatefulWidget {
 }
 
 class _BookCreatedWidgetState extends State<BookCreatedWidget> {
+  late final BooksDataSource dataSource;
   late final LibraryCubit libraryCubit;
   late final BookCreationCubit bookCreationCubit;
+  late final BookInfo bookInfo;
+  late final BookCreate bookCreate;
 
   @override
   void initState() {
@@ -39,7 +43,7 @@ class _BookCreatedWidgetState extends State<BookCreatedWidget> {
         splashFactory: NoSplash.splashFactory,
         onTap: () => FocusScope.of(context).unfocus(),
         child: SingleChildScrollView(
-          child: BlocBuilder<BookCreationCubit, BookCreate>(
+          child: BlocBuilder<BookCreationCubit, BookInfo>(
               bloc: bookCreationCubit,
               builder: (context, book) {
                 return Column(
@@ -57,9 +61,6 @@ class _BookCreatedWidgetState extends State<BookCreatedWidget> {
                     const Text('Год').paddingOnly(top: 10),
                     TextField(
                       onChanged: bookCreationCubit.setYear,
-                      decoration: InputDecoration(
-                        helperText: book.isYearValid ? null : 'Введите год',
-                      ),
                     ),
                     const Text('Издательство').paddingOnly(top: 10),
                     TextField(
@@ -71,7 +72,7 @@ class _BookCreatedWidgetState extends State<BookCreatedWidget> {
                     ),
                     Center(
                       child: FilledButton(
-                        onPressed: book.isComplete ? returnBook : null,
+                        onPressed: returnBook,
                         child: const Text('Сохранить'),
                       ),
                     )
@@ -83,8 +84,8 @@ class _BookCreatedWidgetState extends State<BookCreatedWidget> {
     );
   }
 
+  //кнопка сохранить в виджете
   Future<void> returnBook() async {
-    //вернуть bookinfo
     final book = bookCreationCubit.state;
     widget.navigator.pop(book);
   }

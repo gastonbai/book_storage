@@ -33,10 +33,10 @@ mixin _$BookModel {
   String get author => throw _privateConstructorUsedError;
 
   @JsonKey(name: columnYear)
-  num get year => throw _privateConstructorUsedError;
+  String get year => throw _privateConstructorUsedError;
 
   @JsonKey(name: columnPageCount)
-  num get pageCount => throw _privateConstructorUsedError;
+  String get pageCount => throw _privateConstructorUsedError;
 
   Map<String, dynamic> toJson() => throw _privateConstructorUsedError;
 
@@ -56,8 +56,8 @@ abstract class $BookModelCopyWith<$Res> {
       @JsonKey(name: columnTitle) String title,
       @JsonKey(name: columnPublisher) String publisher,
       @JsonKey(name: columnAuthor) String author,
-      @JsonKey(name: columnYear) num year,
-      @JsonKey(name: columnPageCount) num pageCount});
+      @JsonKey(name: columnYear) String year,
+      @JsonKey(name: columnPageCount) String pageCount});
 }
 
 /// @nodoc
@@ -101,11 +101,11 @@ class _$BookModelCopyWithImpl<$Res, $Val extends BookModel>
       year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as num,
+              as String,
       pageCount: null == pageCount
           ? _value.pageCount
           : pageCount // ignore: cast_nullable_to_non_nullable
-              as num,
+              as String,
     ) as $Val);
   }
 }
@@ -124,8 +124,8 @@ abstract class _$$BookModelImplCopyWith<$Res>
       @JsonKey(name: columnTitle) String title,
       @JsonKey(name: columnPublisher) String publisher,
       @JsonKey(name: columnAuthor) String author,
-      @JsonKey(name: columnYear) num year,
-      @JsonKey(name: columnPageCount) num pageCount});
+      @JsonKey(name: columnYear) String year,
+      @JsonKey(name: columnPageCount) String pageCount});
 }
 
 /// @nodoc
@@ -166,11 +166,11 @@ class __$$BookModelImplCopyWithImpl<$Res>
       year: null == year
           ? _value.year
           : year // ignore: cast_nullable_to_non_nullable
-              as num,
+              as String,
       pageCount: null == pageCount
           ? _value.pageCount
           : pageCount // ignore: cast_nullable_to_non_nullable
-              as num,
+              as String,
     ));
   }
 }
@@ -184,8 +184,8 @@ class _$BookModelImpl implements _BookModel {
       @JsonKey(name: columnTitle) this.title = '',
       @JsonKey(name: columnPublisher) this.publisher = '',
       @JsonKey(name: columnAuthor) this.author = '',
-      @JsonKey(name: columnYear) this.year = 0,
-      @JsonKey(name: columnPageCount) this.pageCount = 0});
+      @JsonKey(name: columnYear) this.year = '',
+      @JsonKey(name: columnPageCount) this.pageCount = ''});
 
   factory _$BookModelImpl.fromJson(Map<String, dynamic> json) =>
       _$$BookModelImplFromJson(json);
@@ -204,10 +204,10 @@ class _$BookModelImpl implements _BookModel {
   final String author;
   @override
   @JsonKey(name: columnYear)
-  final num year;
+  final String year;
   @override
   @JsonKey(name: columnPageCount)
-  final num pageCount;
+  final String pageCount;
 
   @override
   String toString() {
@@ -254,8 +254,8 @@ abstract class _BookModel implements BookModel {
       @JsonKey(name: columnTitle) final String title,
       @JsonKey(name: columnPublisher) final String publisher,
       @JsonKey(name: columnAuthor) final String author,
-      @JsonKey(name: columnYear) final num year,
-      @JsonKey(name: columnPageCount) final num pageCount}) = _$BookModelImpl;
+      @JsonKey(name: columnYear) final String year,
+      @JsonKey(name: columnPageCount) final String pageCount}) = _$BookModelImpl;
 
   factory _BookModel.fromJson(Map<String, dynamic> json) =
       _$BookModelImpl.fromJson;
@@ -278,11 +278,11 @@ abstract class _BookModel implements BookModel {
 
   @override
   @JsonKey(name: columnYear)
-  num get year;
+  String get year;
 
   @override
   @JsonKey(name: columnPageCount)
-  num get pageCount;
+  String get pageCount;
 
   @override
   @JsonKey(ignore: true)

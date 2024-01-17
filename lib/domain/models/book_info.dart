@@ -1,3 +1,7 @@
+import 'package:book_storage/domain/models/book_create.dart';
+
+import '../../features/library/book_manager.dart';
+
 ///Создание заголовка, издательства, автора
 class BookInfo {
   final String title;
@@ -6,16 +10,16 @@ class BookInfo {
 
   ///Только положительные значения для года и количества страниц
   final int? id;
-  final int year;
-  final int pageCount;
+  final String year;
+  final String pageCount;
 
   ///Содержание в строке
-  BookInfo({
+  BookInfo( {
     this.title = '',
     this.publisher = '',
     this.author = '',
-    this.year = -1,
-    this.pageCount = 0,
+    this.year = '',
+    this.pageCount = '',
     this.id,
   });
 }
@@ -26,11 +30,10 @@ extension BookCopy on BookInfo {
     String? title,
     String? publisher,
     String? author,
-    int? year,
-    int? pageCount,
+    String? year,
+    String? pageCount,
   }) {
     return BookInfo(
-      id: id ?? this.id,
       title: title ?? this.title,
       publisher: publisher ?? this.publisher,
       author: author ?? this.author,

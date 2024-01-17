@@ -12,8 +12,8 @@ _$BookModelImpl _$$BookModelImplFromJson(Map<String, dynamic> json) =>
       title: json['title'] as String? ?? '',
       publisher: json['publisher'] as String? ?? '',
       author: json['author'] as String? ?? '',
-      year: json['year'] as num? ?? 0,
-      pageCount: json['pageCount'] as num? ?? 0,
+      year: json['year'] as String? ?? '',
+      pageCount: json['pageCount'] as String? ?? '',
     );
 
 Map<String, dynamic> _$$BookModelImplToJson(_$BookModelImpl instance) =>

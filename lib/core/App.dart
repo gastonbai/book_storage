@@ -1,6 +1,8 @@
+//библиотеки
 import 'package:flutter/material.dart';
 import '../pages/library_page.dart';
 
+//основной экран
 class App extends StatelessWidget {
   const App({super.key});
 

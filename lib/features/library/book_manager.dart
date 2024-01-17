@@ -1,10 +1,12 @@
 import 'package:book_storage/domain/models/book_create.dart';
+import 'package:book_storage/domain/models/book_info.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-class BookCreationCubit extends Cubit<BookCreate> {
-  BookCreationCubit() : super(BookCreate());
+//класс созданый для передачи информации в БД, использует Cubit
+class BookCreationCubit extends Cubit<BookInfo> {
+  BookCreationCubit() : super(BookInfo());
 
-  void setTitle(String value) => emit(state.copyWith(title: value));
+  void setTitle(String value) => emit(state.copyWith(title: value[0]));
 
   void setYear(String value) => emit(state.copyWith(year: value));
 
@@ -14,3 +16,4 @@ class BookCreationCubit extends Cubit<BookCreate> {
 
   void setAuthor(String value) => emit(state.copyWith(author: value));
 }
+

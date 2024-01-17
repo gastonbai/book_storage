@@ -10,6 +10,7 @@ class BookShortInfoWidget extends StatelessWidget {
     super.key,
   });
 
+  //виджет книги, когда добавляем появляет ОН
   @override
   Widget build(BuildContext context) {
     return Row(

@@ -8,6 +8,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'core/App.dart';
 import 'data/local_data_sources/book_storage/book_dara_source.dart';
 
+//запуск самого приложения
 void main() {
   runZonedGuarded(
     () async {

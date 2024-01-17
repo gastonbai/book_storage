@@ -1,4 +1,7 @@
-class BookCreate {
+//модель создания записи в БД
+import 'package:book_storage/domain/models/book_info.dart';
+
+class BookCreate{
   final String title;
   final String publisher;
   final String author;
@@ -15,7 +18,7 @@ class BookCreate {
 }
 
 extension BookCopy on BookCreate {
-  BookCreate copyWith({
+  BookCreate copyWith( {
     String? title,
     String? publisher,
     String? author,
@@ -32,13 +35,13 @@ extension BookCopy on BookCreate {
   }
 }
 
-
+//проверка полей в БД
 extension BookComplition on BookCreate {
   bool get isTitleComplete {
     return true; //реализовать проверку Д,з
   }
 
-  bool get isAuthorComplete {
+   bool get isAuthorComplete {
     return true; //реализовать проверку Д,з
   }
 
@@ -50,12 +53,13 @@ extension BookComplition on BookCreate {
       isTitleComplete && isAuthorComplete && isPageCountComplete;
 }
 
+//валидация полей в БД
 extension BookValidation on BookCreate {
   bool get isTitleValid {
     return true; //реализовать для каждого поля
   }
 
   bool get isYearValid {
-    return int.tryParse(year) != null; //реализовать для каждого поля
+    return int.tryParse(year) != null;
   }
 }

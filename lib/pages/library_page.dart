@@ -7,6 +7,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import '../domain/models/book_info.dart';
 
+//основной виджет, хранит в себе книги, обновляет их, принимает, выгружает
 class LibraryPage extends StatefulWidget {
   const LibraryPage({
     super.key,
@@ -52,10 +53,11 @@ class _LibraryPageState extends State<LibraryPage> {
     );
   }
 
+  //вызов виджета для добавления книги, всплывающее окно
   Future<void> createBook() async {
     final book = await showDialog<BookInfo?>(
       context: context,
-      builder: (context) => BookCreatedWidget(navigator: Navigator.of(context)),
+      builder: (context) => BookCreatedWidget(navigator: Navigator.of(context),),
     );
 
     if (book != null) {
